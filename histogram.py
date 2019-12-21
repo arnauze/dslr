@@ -27,13 +27,13 @@ def histogram():
             if isNumber(f[i][0]) and i != "Index":
                 ax = fig.add_subplot(count / 3, count / 3, index)
                 index += 1
-                ax.hist(f[i][f["Hogwarts House"] == "Gryffindor"])
-                ax.hist(f[i][f["Hogwarts House"] == "Slytherin"])
-                ax.hist(f[i][f["Hogwarts House"] == "Ravenclaw"])
-                ax.hist(f[i][f["Hogwarts House"] == "Hufflepuff"])
+                ax.hist(f[i][f["Hogwarts House"] == "Gryffindor"], color="r", alpha=0.5)
+                ax.hist(f[i][f["Hogwarts House"] == "Slytherin"], color="g", alpha=0.5)
+                ax.hist(f[i][f["Hogwarts House"] == "Ravenclaw"], color="y", alpha=0.5)
+                ax.hist(f[i][f["Hogwarts House"] == "Hufflepuff"], color="b", alpha=0.5)
                 ax.set_title(i)
-                ax.set_ylabel("Hey")
-                ax.set_xlabel("Hi")
+                ax.set_ylabel("Frequency")
+                ax.set_xlabel("Grade")
 
         plt.subplots_adjust(hspace=.5, wspace=.5)
         plt.show()
